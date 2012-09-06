@@ -31,14 +31,19 @@ public class PostToTwitter extends AsyncTask<String, Integer, String> {
 	 */
 	public Twitter getTwitter() {
 		if (twitter == null) {
+			/*
 	        ConfigurationBuilder cb = new ConfigurationBuilder();
 			cb.setDebugEnabled(true)
 			  .setOAuthConsumerKey("f4XW8CnYAiLM4kacJUCERQ")
 			  .setOAuthConsumerSecret("6Ttjl9RYcWbnV8cN88Q9GBasMppu5HNSQ01FO3XgiZQ")
-			  .setOAuthAccessToken("77163309-Sns5FjjBRKJVE0aDA9IhayBBVqrl0635S3fCtiBSw")
-			  .setOAuthAccessTokenSecret("sMwgbopHJJYp1SN5KqKfb673nniPwSv6yCu7g7pFc");
+			  .setOAuthAccessToken("77163309-S1oArZccdr9yw92fDPf73vU5GZeMYbD06T92Ifed0")
+			  .setOAuthAccessTokenSecret("Y8rwRGvxbg4xTYtcuQofDdG3rAJuPBmQzGRkfPHY4");
 			TwitterFactory tf = new TwitterFactory(cb.build());
 			twitter = tf.getInstance();
+			*/
+			
+			// Use twitter4j.properties instead of hard coding
+			twitter = new TwitterFactory().getInstance();
 		}
 		
 		return twitter;
